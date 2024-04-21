@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { v4 as uuidV4 } from "uuid";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import logo from "../static/logo.png";
 
-
-const Home = () => {
+const Home = (props) => {
 	const navigate = useNavigate();
 
 	const [roomId, setRoomId] = useState("");
 	const [username, setUsername] = useState("");
+
 	const createNewRoom = (e) => {
 		e.preventDefault();
 		const id = uuidV4();
@@ -40,7 +41,7 @@ const Home = () => {
 			<div className="formWrapper">
 				<img
 					className="homePageLogo"
-					src="/code-sync.png"
+					src={logo}
 					alt="code-sync-logo"
 				/>
 				<h4 className="mainLabel">Paste invitation ROOM ID</h4>
@@ -76,14 +77,6 @@ const Home = () => {
 					</span>
 				</div>
 			</div>
-			<footer>
-				<h4>
-					Built with 💛 &nbsp; by &nbsp;
-					<a href="https://github.com/codersgyan">
-						Elysian01
-					</a>
-				</h4>
-			</footer>
 		</div>
 	);
 };

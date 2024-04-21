@@ -1,4 +1,4 @@
-export default AppStyles = {
+const AppStyles = {
 	color: {
 		red: "#f40d30",
 		primary: "#4aed88",
@@ -14,3 +14,5 @@ export default AppStyles = {
 		darkRed: "#8b0000",
 	},
 };
+
+export default AppStyles;

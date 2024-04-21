@@ -21,17 +21,23 @@ body {
   padding: 20px;
   border-radius: 10px;
   width: 400px;
+  margin: 30px;
+  max-height: 90%;
   max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
+.homePageLogo {
+  width: 80%;
+  height: 320px;
+  /* max-height: 80px; */
+  margin-bottom: 30px;
+  margin: auto;
 }
 
-footer a {
-  color: #4aee88;
-}
 
 .inputGroup {
   display: flex;
@@ -43,10 +49,7 @@ footer a {
   margin-top: 0;
 }
 
-.homePageLogo {
-  height: 80px;
-  margin-bottom: 30px;
-}
+
 
 .inputBox {
   padding: 10px;
