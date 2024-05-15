@@ -4,12 +4,11 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import logo from "../static/logo.png";
 
-const Home = (props) => {
+const Home = () => {
 	const navigate = useNavigate();
 
 	const [roomId, setRoomId] = useState("");
 	const [username, setUsername] = useState("");
-
 	const createNewRoom = (e) => {
 		e.preventDefault();
 		const id = uuidV4();
