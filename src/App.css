@@ -12,6 +12,9 @@
     border-radius: 10px;
     width: 400px;
     max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .checkboxWrapper {
@@ -100,7 +103,7 @@
 }
 
 .homePageLogo {
-    height: 80px;
+    height: 275px;
     margin-bottom: 30px;
 }
 
@@ -132,6 +135,10 @@
     background: #4aed88;
     width: 100px;
     margin: auto;
+}
+
+.joinBtn {
+    margin-left: 150px;
 }
 
 .joinBtn:hover,
