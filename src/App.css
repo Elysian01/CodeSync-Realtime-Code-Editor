@@ -14,13 +14,79 @@
     max-width: 90%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
+.checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer a {
-    color: #4aee88;
+.checkboxWrapper label {
+    font-size: 18px;
+}
+
+.editorInterviewWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.editorWrap {
+    /* min-width: 60%; */
+    width: 100%;
+    min-height: 100%;
+}
+
+.interviewerAnalysisWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    /* margin: 0 auto; */
+    color: white;
+    
+}
+
+.interviewerAnalysisWrapper h1 {
+    color: #4aed88;
+    text-align: center;
+}
+
+.inputAnalysis {
+    width: 100%;
+    text-align: left;
+}
+
+.inputAnalysis input {
+    min-width:400px;
+    height: 150px;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: medium;
+    margin-right: 40px;
+}
+
+.requirementAnalysis .requirements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: flex-start;
+}
+
+
+.requirementAnalysis label {
+    display: inline-block;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.requirementCheckbox {
+    margin-right: 5px;
 }
 
 .inputGroup {
@@ -57,13 +123,15 @@ footer a {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    max-width: 250px;
+    float: left;
 }
 
 .joinBtn,
 .leaveBtn {
     background: #4aed88;
     width: 100px;
-    margin-left: auto;
+    margin: auto;
 }
 
 .joinBtn:hover,
@@ -137,6 +205,7 @@ footer a:hover {
 }
 .CodeMirror {
     min-height: calc(100vh - 20px);
+    max-height: 100%;
     font-size: 20px;
     line-height: 1.6;
     padding-top: 20px;

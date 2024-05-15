@@ -25,7 +25,8 @@ const Home = () => {
 		// Redirect
 		navigate(`/editor/${roomId}`, {
 			state: {
-				username,
+                username,
+                interviewer
 			},
 		});
 	};
@@ -35,6 +36,13 @@ const Home = () => {
 			joinRoom();
 		}
 	};
+
+	const [interviewer, setInterviewer] = React.useState(false);
+
+	const handleInterviewer = () => {
+		setInterviewer(!interviewer);
+    };
+    
 	return (
 		<div className="homePageWrapper">
 			<div className="formWrapper">
@@ -61,9 +69,23 @@ const Home = () => {
 						value={username}
 						onKeyUp={handleInputEnter}
 					/>
-					<button className="btn joinBtn" onClick={joinRoom}>
-						Join
-					</button>
+					<div className="checkboxWrapper">
+						<label>
+							<input
+								type="checkbox"
+								checked={interviewer}
+								onChange={handleInterviewer}
+							/>
+							I am Interviewer
+						</label>
+
+						<button
+							className="btn joinBtn"
+							onClick={joinRoom}
+						>
+							Join
+						</button>
+					</div>
 					<span className="createInfo">
 						If you don't have an invite then create &nbsp;
 						<a

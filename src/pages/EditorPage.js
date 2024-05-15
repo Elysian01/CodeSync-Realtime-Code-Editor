@@ -11,6 +11,7 @@ import {
 	useParams,
 } from "react-router-dom";
 import logo from "../static/logo.png";
+import InterviewerAnalysis from "../components/InterviewerAnalysis";
 
 const EditorPage = () => {
 	const socketRef = useRef(null);
@@ -19,6 +20,9 @@ const EditorPage = () => {
 	const { roomId } = useParams();
 	const reactNavigator = useNavigate();
 	const [clients, setClients] = useState([]);
+
+	const interviewer = location.state?.interviewer;
+	console.log("Interviewer: ", interviewer);
 
 	useEffect(() => {
 		const init = async () => {
@@ -124,14 +128,17 @@ const EditorPage = () => {
 					Leave
 				</button>
 			</div>
-			<div className="editorWrap">
-				<Editor
-					socketRef={socketRef}
-					roomId={roomId}
-					onCodeChange={(code) => {
-						codeRef.current = code;
-					}}
-				/>
+			<div className="editorInterviewWrapper">
+				<div className="editorWrap">
+					<Editor
+						socketRef={socketRef}
+						roomId={roomId}
+						onCodeChange={(code) => {
+							codeRef.current = code;
+						}}
+					/>
+				</div>
+				{interviewer && <InterviewerAnalysis />}
 			</div>
 		</div>
 	);
