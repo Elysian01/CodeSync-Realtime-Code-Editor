@@ -10,11 +10,14 @@ Building a Real-time code editor using Reactjs, Nodejs, Expressjs, and Socket.io
 
 In the project directory, you can run:
 
+1. Start the Express Server
+
+###  `node server.js`
+
+2. Start React Application
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Start the Express Server
 
-###  `node server.js`
